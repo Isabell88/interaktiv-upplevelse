@@ -1,21 +1,10 @@
 
 
-// function toggleText() {
-//     var text = document.getElementById("story1"); 
-//      if (text.style.display === "none"){
-//          text.style.display = "block";
-//       } else {
-//         text.style.display = "none";
-//     }
-// }
-
-// the state 
-
 let currentScene = 0
 
 const scenes = [
     {
-        description: "Du har gått vilse mitt ut i skogen. du kommer inte ihåg var du kom från. Du står mitt på en väg och funderar åt vilket håll du ska för att komma hem? ska du ta höger elle venster?",
+        description: "Du har gått vilse mitt ut i skogen. du kommer inte ihåg var du kom från. Du står mitt på en väg och funderar åt vilket håll du ska för att komma hem? ska du ta höger elle vänster?",
         choices: ["höger", "vänster"],
         nextScene: [1, 4]
 
@@ -27,19 +16,30 @@ const scenes = [
     },
 
     {
-        description: "En gammal kvinna öppnar dörren. Hon har en lång näsa med en stor finne på. Det står två tallikar serverade med mat på bordet. kvinnan drar ut stolen för dig och ber dig att sitta. vad gör du? sitter eller springer?",
+        description: "En gammal kvinna öppnar dörren. Hon har en lång näsa med en stor vårta på. Det står två tallikar serverade med mat på bordet. kvinnan drar ut stolen för dig och ber dig att sitta. vad gör du? sitter eller springer?",
         choices: ["sitter", "springer"],
         nextScene: [3, 4]
     },
     {
         description: "Du sätter dig på stolen och börjar äta, men stolen viker sig ner under golvet och du blir inlåst i en källare. där nere finns inget förutom en stol och ett bord, du märker att de finns en ventelations öppning högt upp på väggen. vad gör du nu? sätter du stolen på bordet och kryper ur ventelationen? ja eller nej",
         choices: ["ja", "nej"],
-        nextScene: [4,]
+        nextScene: [4,6]
     },
     {
-        description: "Du springer raka vägen därifrån de snabbaste du bara kan och snart är du hemma safe and sound. VILL DU SPELA IGEN",
-        choices: [],
-        nextScene: []
+        description: "Du går på en smal väg mellan träden, du kan höra att det knastrar i grenarna. du vänder dig om för att se om någon är där men du ser ingen. du fortsätter att gå, helt plöstligt hamnar du i en fälla upp i ett träd. du kollar i dina fickor där hittar du en nagelknipsare och en nagelfil. vilken använder du",
+        choices: ["nagelknipsare", "nagelfil"],
+        nextScene: [5,5]
+    },
+    
+    {
+        description: "Du springer raka vägen därifrån de snabbaste du bara kan och snart är du hemma safe and sound. VILL DU SPELA IGEN? ja eller nej",
+        choices: ["ja", "nej"],
+        nextScene: [0,0]
+    },
+    {
+        description: "du sitter kvar i källaren ett tag och vågar inte rymma ifall hexan kommer på dig. nu hör du henne slippa sina knivar och mummla med en gäll och pipig röst idag ska de bli kalas yiiiiii. du blir så rädd att sätter stole på borden och kryper ut väntilen och springer därifrån så snabbt de bara går. VILL DU SPELA IGEN? ja eller nej",
+        choices: ["ja", "nej"],
+        nextScene: [0,0]
     }
 
 ];
@@ -71,6 +71,13 @@ function handelUserChoice(answer) {
     if (answer === scenes[currentScene].choices[4]) {
         currentScene = scenes[currentScene].nextScene[4]
     }
+    if (answer === scenes[currentScene].choices[5]) {
+        currentScene = scenes[currentScene].nextScene[5]
+    }
+    if (answer === scenes[currentScene].choices[6]) {
+        currentScene = scenes[currentScene].nextScene[6]
+    }
+    
 
     // present scene
 
@@ -93,26 +100,3 @@ function handelUserChoice(answer) {
 
 
 
-// function options() {
-//     var selektValue = document.getElementById("selektOption");
-//     var selektIndex = selekteValue.options[selektValue.selectedIndex].value;
-//     var selektMessage = '';
-
-//     if (selektIndex == 1)
-//         selektMessage = 'story2';
-//     else if (selektIndex == 2)
-//         selektMessage = '';
-
-//    document.getElementById("p").innerHTML = colourMessage;
-// }
-// function interFunction() {
-//     var x = document.getElementById("optionsBox").value;
-//     document.getElementById("story2").innerHTML = x;
-
-//     var text = document.getElementById("story2"); 
-//      if (text.style.display === "none"){
-//          text.style.display = "block";
-//       } else {
-//         text.style.display = "none";
-//     }
-//   }
