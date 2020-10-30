@@ -32,12 +32,12 @@ const scenes = [
     },
     
     {
-        description: "Du springer raka vägen därifrån de snabbaste du bara kan och snart är du hemma safe and sound. VILL DU SPELA IGEN? ja eller nej",
+        description: "Du springer raka vägen därifrån, de snabbaste du bara kan och snart är du hemma safe and sound. VILL DU SPELA IGEN? ja eller nej",
         choices: ["ja", "nej"],
         nextScene: [0,0]
     },
     {
-        description: "du sitter kvar i källaren ett tag och vågar inte rymma ifall hexan kommer på dig. nu hör du henne slippa sina knivar och mummla med en gäll och pipig röst idag ska de bli kalas yiiiiii. du blir så rädd att sätter stole på borden och kryper ut väntilen och springer därifrån så snabbt de bara går. VILL DU SPELA IGEN? ja eller nej",
+        description: "Du sitter kvar i källaren ett tag och vågar inte rymma ifall häxan kommerpå dig. nu hör du henne slipa sina knivar och mummla med en  pipig röst idag ska de bli kalas yiiiiii. du blir så rädd att sätter stole på borden och kryper ut väntilen och springer därifrån så snabbt de bara går. VILL DU SPELA IGEN? ja eller nej",
         choices: ["ja", "nej"],
         nextScene: [0,0]
     }
